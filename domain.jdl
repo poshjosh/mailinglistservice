@@ -1,0 +1,47 @@
+entity MailingList {
+	id Integer required,
+	name String required maxlength(64),
+	description String maxlength(255),
+	timeCreated Instant required,
+	timeModified Instant required
+}
+
+enum MailingListUserStatus {
+        Unverified,
+        Verified,
+        Unsubscribed
+}
+
+
+entity MailingListUser {
+	id Integer required,
+	username String maxlength(64),
+	emailAddress String maxlength(191) pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/),
+	lastName String maxlength(64),
+	firstName String maxlength(64),
+	status MailingListUserStatus required,
+	timeCreated Instant required,
+	timeModified Instant required
+}
+
+
+entity UserMailingList {
+	id Integer required,
+	status MailingListUserStatus required,
+	timeCreated Instant required,
+	timeModified Instant required
+}
+
+relationship ManyToOne {
+	UserMailingList{user required} to MailingListUser
+}
+
+relationship ManyToOne {
+	UserMailingList{mailingList required} to MailingList
+}
+
+// Options
+service * with serviceClass
+paginate * with pagination
+dto * with mapstruct
+filter *
