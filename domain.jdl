@@ -1,5 +1,5 @@
 entity MailingList {
-	id Integer required,
+	id Long required,
 	name String required maxlength(64),
 	description String maxlength(255),
 	timeCreated Instant required,
@@ -12,9 +12,8 @@ enum MailingListUserStatus {
         Unsubscribed
 }
 
-
 entity MailingListUser {
-	id Integer required,
+	id Long required,
 	username String maxlength(64),
 	emailAddress String maxlength(191) pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/),
 	lastName String maxlength(64),
@@ -26,7 +25,7 @@ entity MailingListUser {
 
 
 entity UserMailingList {
-	id Integer required,
+	id Long required,
 	status MailingListUserStatus required,
 	timeCreated Instant required,
 	timeModified Instant required

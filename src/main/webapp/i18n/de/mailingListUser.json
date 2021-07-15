@@ -1,0 +1,30 @@
+{
+  "mailinglistserviceApp": {
+    "mailingListUser": {
+      "home": {
+        "title": "Mailing List Users",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Mailing List User erstellen",
+        "createOrEditLabel": "Mailing List User erstellen oder bearbeiten",
+        "notFound": "Keine Mailing List Users gefunden"
+      },
+      "created": "Mailing List User erstellt mit ID {{ param }}",
+      "updated": "Mailing List User aktualisiert mit ID {{ param }}",
+      "deleted": "Mailing List User gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Mailing List User {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Mailing List User"
+      },
+      "id": "Id",
+      "username": "Username",
+      "emailAddress": "Email Address",
+      "lastName": "Last Name",
+      "firstName": "First Name",
+      "status": "Status",
+      "timeCreated": "Time Created",
+      "timeModified": "Time Modified"
+    }
+  }
+}

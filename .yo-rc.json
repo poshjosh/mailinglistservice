@@ -41,6 +41,8 @@
     "packageFolder": "com/looseboxes/mailinglist/service",
     "jwtSecretKey": "ZTkyZGIyYWVlYWU0MDgzNjIxNTI3MTY3YTJlZGFlNGU2MjU2ZTA4YjM3ZjRmYzk0NjY0ODI2ZDUxMjUwZWMwZjVkMjE0NmJiMTI3ZDlkNTgwMzA5ZTVjYzM3OTIyODIxYjk2MGJhY2Y2MzhhYzA2MjEyMjUwMzYwMzU0NjdiMjY=",
     "clientPackageManager": "npm",
-    "languages": ["en", "de"]
+    "languages": ["en", "de"],
+    "entities": ["MailingList", "MailingListUser", "UserMailingList"],
+    "lastLiquibaseTimestamp": 1626123029000
   }
 }

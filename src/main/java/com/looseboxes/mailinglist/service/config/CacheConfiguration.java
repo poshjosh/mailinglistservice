@@ -48,6 +48,9 @@ public class CacheConfiguration {
             createCache(cm, com.looseboxes.mailinglist.service.domain.User.class.getName());
             createCache(cm, com.looseboxes.mailinglist.service.domain.Authority.class.getName());
             createCache(cm, com.looseboxes.mailinglist.service.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.looseboxes.mailinglist.service.domain.MailingList.class.getName());
+            createCache(cm, com.looseboxes.mailinglist.service.domain.MailingListUser.class.getName());
+            createCache(cm, com.looseboxes.mailinglist.service.domain.UserMailingList.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

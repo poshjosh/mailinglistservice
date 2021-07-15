@@ -1,0 +1,10 @@
+{
+  "mailinglistserviceApp": {
+    "MailingListUserStatus": {
+      "null": "",
+      "Unverified": "Unverified",
+      "Verified": "Verified",
+      "Unsubscribed": "Unsubscribed"
+    }
+  }
+}

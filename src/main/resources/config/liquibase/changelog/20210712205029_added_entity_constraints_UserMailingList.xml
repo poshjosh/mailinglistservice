@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity UserMailingList.
+    -->
+    <changeSet id="20210712205029-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="user_mailing_list"
+                                 constraintName="fk_user_mailing_list__user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="mailing_list_user"/>
+
+        <addForeignKeyConstraint baseColumnNames="mailing_list_id"
+                                 baseTableName="user_mailing_list"
+                                 constraintName="fk_user_mailing_list__mailing_list_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="mailing_list"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,27 @@
+{
+  "mailinglistserviceApp": {
+    "mailingList": {
+      "home": {
+        "title": "Mailing Lists",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Mailing List erstellen",
+        "createOrEditLabel": "Mailing List erstellen oder bearbeiten",
+        "notFound": "Keine Mailing Lists gefunden"
+      },
+      "created": "Mailing List erstellt mit ID {{ param }}",
+      "updated": "Mailing List aktualisiert mit ID {{ param }}",
+      "deleted": "Mailing List gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Mailing List {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Mailing List"
+      },
+      "id": "Id",
+      "name": "Name",
+      "description": "Description",
+      "timeCreated": "Time Created",
+      "timeModified": "Time Modified"
+    }
+  }
+}

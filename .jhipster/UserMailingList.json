@@ -1,0 +1,52 @@
+{
+  "name": "UserMailingList",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "MailingListUserStatus",
+      "fieldValues": "Unverified,Verified,Unsubscribed",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "timeCreated",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "timeModified",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "mailingListUser",
+      "otherEntityRelationshipName": "userMailingList",
+      "relationshipValidateRules": "required",
+      "relationshipName": "user"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "mailingList",
+      "otherEntityRelationshipName": "userMailingList",
+      "relationshipValidateRules": "required",
+      "relationshipName": "mailingList"
+    }
+  ],
+  "entityTableName": "user_mailing_list",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210712205029"
+}
