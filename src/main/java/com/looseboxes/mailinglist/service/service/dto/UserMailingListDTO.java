@@ -11,7 +11,6 @@ import javax.validation.constraints.*;
  */
 public class UserMailingListDTO implements Serializable {
 
-    @NotNull
     private Long id;
 
     @NotNull
