@@ -23,7 +23,7 @@ public class MailingList implements Serializable {
 
     @NotNull
     @Size(max = 64)
-    @Column(name = "name", length = 64, nullable = false)
+    @Column(name = "name", length = 64, nullable = false, unique = true)
     private String name;
 
     @Size(max = 255)

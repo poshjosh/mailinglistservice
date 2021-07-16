@@ -28,7 +28,7 @@ public class MailingListUser implements Serializable {
 
     @Size(max = 191)
     @Pattern(regexp = "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$")
-    @Column(name = "email_address", length = 191)
+    @Column(name = "email_address", length = 191, unique = true)
     private String emailAddress;
 
     @Size(max = 64)

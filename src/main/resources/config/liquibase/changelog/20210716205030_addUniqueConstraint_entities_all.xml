@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <!--
+        Added unique constrains for all entities
+        When we had: UserMailingList.user with @Column(name = "user")
+        Liquibase generated actual column name of 'user_id' and not 'user'
+        So we use use the actual column name here, in this case: 'user_id',
+        even though the entity UserMailingList has a field named 'user' and none
+        named 'user_id'
+    -->
+    <changeSet id="20210716205030" author="chinomso-ikwuagwu">
+        <addUniqueConstraint tableName="mailing_list" columnNames="name"/>
+        <addUniqueConstraint tableName="mailing_list_user" columnNames="emailAddress"/>
+        <addUniqueConstraint tableName="user_mailing_list" columnNames="user_id, mailing_list_id"
+                             constraintName="unq_user_mailing_list__user__mailing_list"/>
+    </changeSet>
+</databaseChangeLog>

@@ -22,4 +22,5 @@
     <include file="config/liquibase/changelog/20210712205029_added_entity_constraints_UserMailingList.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20210716205030_addUniqueConstraint_entities_all.xml" relativeToChangelogFile="false"/>
 </databaseChangeLog>

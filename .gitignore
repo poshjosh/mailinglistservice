@@ -1,3 +1,10 @@
+########
+# Custom
+########
+git-ignore/
+src/main/resources/static/js/dev/git-ignore/
+/src/main/resources/static/js/dev/git-ignore/
+
 ######################
 # Project Specific
 ######################
