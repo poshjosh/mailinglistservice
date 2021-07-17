@@ -13,7 +13,7 @@
     -->
     <changeSet id="20210716205030" author="chinomso-ikwuagwu">
         <addUniqueConstraint tableName="mailing_list" columnNames="name"/>
-        <addUniqueConstraint tableName="mailing_list_user" columnNames="emailAddress"/>
+        <addUniqueConstraint tableName="mailing_list_user" columnNames="email_address"/>
         <addUniqueConstraint tableName="user_mailing_list" columnNames="user_id, mailing_list_id"
                              constraintName="unq_user_mailing_list__user__mailing_list"/>
     </changeSet>
